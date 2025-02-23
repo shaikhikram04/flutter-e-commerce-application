@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ICheckBoxTheme {
-  const ICheckBoxTheme._();
+class ICheckboxTheme {
+  const ICheckboxTheme._();
 
-  static CheckboxThemeData lightCheckBoxTheme = CheckboxThemeData(
+  static CheckboxThemeData lightCheckboxTheme = CheckboxThemeData(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
     checkColor: WidgetStateColor.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
