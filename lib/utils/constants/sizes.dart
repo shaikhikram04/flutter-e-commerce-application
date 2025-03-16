@@ -60,11 +60,10 @@ class ISizes {
 
   //* Image carousel height
   static const double imageCarouselHeight = 200.0;
-  
+
   //* Loading indicator size
   static const double loadingIndicatorSize = 36.0;
 
   //* Grid view spacing
   static const double gridViewSpacing = 16.0;
-
 }
