@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
+import 'package:flutter_e_commerce/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
 import 'package:flutter_e_commerce/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
 import 'package:flutter_e_commerce/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
 import 'package:flutter_e_commerce/utils/constants/image_strings.dart';
@@ -41,6 +42,7 @@ class OnboardingScreen extends StatelessWidget {
           const OnBoardingDotNavigation(),
 
           //* Circular Button
+          const OnBoardingNextButton(),
         ],
       ),
     );
