@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_e_commerce/features/authentication/controllers.onboarding/onboarding_controller.dart';
 import 'package:flutter_e_commerce/utils/constants/colors.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:flutter_e_commerce/utils/devices/device_utility.dart';
@@ -18,7 +19,7 @@ class OnBoardingNextButton extends StatelessWidget {
       right: ISizes.defaultSpace,
       bottom: IDeviceUtils.getBottomNevigationBarHeight(),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () => OnBoardingController.instance.nextPage(),
         style: ElevatedButton.styleFrom(
           shape: const CircleBorder(),
           backgroundColor: dark ? IColors.primary : Colors.black,
