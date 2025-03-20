@@ -15,7 +15,7 @@ class IElevatedButtonTheme {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       ),
-      side: BorderSide(color: Colors.blue),
+      side: const BorderSide(color: Colors.blue),
       padding: const EdgeInsets.symmetric(vertical: 18),
       textStyle: ITextTheme.lightTextTheme.titleMedium,
     ),
@@ -32,7 +32,7 @@ class IElevatedButtonTheme {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       ),
-      side: BorderSide(color: Colors.blue),
+      side: const BorderSide(color: Colors.blue),
       padding: const EdgeInsets.symmetric(vertical: 18),
       textStyle: ITextTheme.darkTextTheme.titleMedium,
     ),

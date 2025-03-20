@@ -31,7 +31,7 @@ class IColors {
 
   //* background container colors
   static const Color lightContainer = Color(0xFFf6f6f6);
-  static Color darkContainer = Color(0xFF272727).withValues(alpha: 0.1);
+  static Color darkContainer = const Color(0xFF272727).withValues(alpha: 0.1);
 
   //* button colors
   static const Color buttonPrimary = Color(0xFF4B68FF);

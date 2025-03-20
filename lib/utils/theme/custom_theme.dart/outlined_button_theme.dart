@@ -8,9 +8,9 @@ class IOutlinedButtonTheme {
     style: OutlinedButton.styleFrom(
       elevation: 0,
       foregroundColor: Colors.black,
-      side: BorderSide(color: Colors.blue),
+      side: const BorderSide(color: Colors.blue),
       textStyle: ITextTheme.lightTextTheme.titleLarge,
-      padding: EdgeInsets.symmetric(vertical: 16, horizontal: 20),
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
     ),
   );
@@ -19,9 +19,9 @@ class IOutlinedButtonTheme {
     style: OutlinedButton.styleFrom(
       elevation: 0,
       foregroundColor: Colors.white,
-      side: BorderSide(color: Colors.blueAccent),
+      side: const BorderSide(color: Colors.blueAccent),
       textStyle: ITextTheme.darkTextTheme.titleLarge,
-      padding: EdgeInsets.symmetric(vertical: 16, horizontal: 20),
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14))
     ),
   );

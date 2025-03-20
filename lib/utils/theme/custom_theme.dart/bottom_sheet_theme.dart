@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class IBottomSheetTheme {
   const IBottomSheetTheme._();
 
-  static BottomSheetThemeData lightBottomSheetTheme = BottomSheetThemeData(
+  static BottomSheetThemeData lightBottomSheetTheme = const BottomSheetThemeData(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.all(Radius.circular(16)),
     ),
@@ -13,7 +13,7 @@ class IBottomSheetTheme {
     constraints: BoxConstraints(minWidth: double.infinity),
   );
 
-  static BottomSheetThemeData darkBottomSheetTheme = BottomSheetThemeData(
+  static BottomSheetThemeData darkBottomSheetTheme = const BottomSheetThemeData(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.all(Radius.circular(16)),
     ),

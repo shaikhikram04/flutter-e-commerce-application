@@ -3,116 +3,116 @@ import 'package:flutter/material.dart';
 class ITextTheme {
   const ITextTheme._();
 
-  static TextTheme lightTextTheme = TextTheme().copyWith(
-    headlineLarge: TextStyle().copyWith(
+  static TextTheme lightTextTheme = const TextTheme().copyWith(
+    headlineLarge: const TextStyle().copyWith(
       fontSize: 32,
       color: Colors.black,
       fontWeight: FontWeight.bold,
     ),
-    headlineMedium: TextStyle().copyWith(
+    headlineMedium: const TextStyle().copyWith(
       fontSize: 24,
       color: Colors.black,
       fontWeight: FontWeight.w600,
     ),
-    headlineSmall: TextStyle().copyWith(
+    headlineSmall: const TextStyle().copyWith(
       fontSize: 18,
       color: Colors.black,
       fontWeight: FontWeight.w600,
     ),
-    titleLarge: TextStyle().copyWith(
+    titleLarge: const TextStyle().copyWith(
       fontSize: 16,
       color: Colors.black,
       fontWeight: FontWeight.w600,
     ),
-    titleMedium: TextStyle().copyWith(
+    titleMedium: const TextStyle().copyWith(
       fontSize: 16,
       color: Colors.black,
       fontWeight: FontWeight.w500,
     ),
-    titleSmall: TextStyle().copyWith(
+    titleSmall: const TextStyle().copyWith(
       fontSize: 16,
       color: Colors.black,
       fontWeight: FontWeight.w400,
     ),
-    bodyLarge: TextStyle().copyWith(
+    bodyLarge: const TextStyle().copyWith(
       fontSize: 14,
       color: Colors.black,
       fontWeight: FontWeight.w500,
     ),
-    bodyMedium: TextStyle().copyWith(
+    bodyMedium: const TextStyle().copyWith(
       fontSize: 14,
       color: Colors.black,
       fontWeight: FontWeight.normal,
     ),
-    bodySmall: TextStyle().copyWith(
+    bodySmall: const TextStyle().copyWith(
       fontSize: 14,
       color: Colors.black.withValues(alpha: 0.5),
       fontWeight: FontWeight.w500,
     ),
-    labelLarge: TextStyle().copyWith(
+    labelLarge: const TextStyle().copyWith(
       fontSize: 12,
       color: Colors.black,
       fontWeight: FontWeight.normal,
     ),
-    labelMedium: TextStyle().copyWith(
+    labelMedium: const TextStyle().copyWith(
       fontSize: 12,
       color: Colors.black.withValues(alpha: 0.5),
       fontWeight: FontWeight.normal,
     ),
   );
 
-  static TextTheme darkTextTheme = TextTheme().copyWith(
-    headlineLarge: TextStyle().copyWith(
+  static TextTheme darkTextTheme = const TextTheme().copyWith(
+    headlineLarge: const TextStyle().copyWith(
       fontSize: 32,
       color: Colors.white,
       fontWeight: FontWeight.bold,
     ),
-    headlineMedium: TextStyle().copyWith(
+    headlineMedium: const TextStyle().copyWith(
       fontSize: 24,
       color: Colors.white,
       fontWeight: FontWeight.w600,
     ),
-    headlineSmall: TextStyle().copyWith(
+    headlineSmall: const TextStyle().copyWith(
       fontSize: 18,
       color: Colors.white,
       fontWeight: FontWeight.w600,
     ),
-    titleLarge: TextStyle().copyWith(
+    titleLarge: const TextStyle().copyWith(
       fontSize: 16,
       color: Colors.white,
       fontWeight: FontWeight.w600,
     ),
-    titleMedium: TextStyle().copyWith(
+    titleMedium: const TextStyle().copyWith(
       fontSize: 16,
       color: Colors.white,
       fontWeight: FontWeight.w500,
     ),
-    titleSmall: TextStyle().copyWith(
+    titleSmall: const TextStyle().copyWith(
       fontSize: 16,
       color: Colors.white,
       fontWeight: FontWeight.w400,
     ),
-    bodyLarge: TextStyle().copyWith(
+    bodyLarge: const TextStyle().copyWith(
       fontSize: 14,
       color: Colors.white,
       fontWeight: FontWeight.w500,
     ),
-    bodyMedium: TextStyle().copyWith(
+    bodyMedium: const TextStyle().copyWith(
       fontSize: 14,
       color: Colors.white,
       fontWeight: FontWeight.normal,
     ),
-    bodySmall: TextStyle().copyWith(
+    bodySmall: const TextStyle().copyWith(
       fontSize: 14,
       color: Colors.white.withValues(alpha: 0.5),
       fontWeight: FontWeight.w500,
     ),
-    labelLarge: TextStyle().copyWith(
+    labelLarge: const TextStyle().copyWith(
       fontSize: 12,
       color: Colors.white,
       fontWeight: FontWeight.normal,
     ),
-    labelMedium: TextStyle().copyWith(
+    labelMedium: const TextStyle().copyWith(
       fontSize: 12,
       color: Colors.white.withValues(alpha: 0.5),
       fontWeight: FontWeight.normal,

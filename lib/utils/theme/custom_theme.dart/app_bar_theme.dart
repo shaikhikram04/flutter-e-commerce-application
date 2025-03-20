@@ -10,9 +10,9 @@ class IAppBarTheme {
     scrolledUnderElevation: 0,
     backgroundColor: Colors.transparent,
     foregroundColor: Colors.transparent,
-    iconTheme: IconThemeData(color: Colors.black, size: 24),
+    iconTheme: const IconThemeData(color: Colors.black, size: 24),
     titleTextStyle: ITextTheme.lightTextTheme.headlineSmall,
-    actionsIconTheme: IconThemeData(color: Colors.black, size: 24),
+    actionsIconTheme: const IconThemeData(color: Colors.black, size: 24),
   );
   static AppBarTheme darkAppBarTheme = AppBarTheme(
     elevation: 0,
@@ -20,8 +20,8 @@ class IAppBarTheme {
     scrolledUnderElevation: 0,
     backgroundColor: Colors.transparent,
     foregroundColor: Colors.transparent,
-    iconTheme: IconThemeData(color: Colors.black, size: 24),
+    iconTheme: const IconThemeData(color: Colors.black, size: 24),
     titleTextStyle: ITextTheme.darkTextTheme.headlineSmall,
-    actionsIconTheme: IconThemeData(color: Colors.white, size: 24),
+    actionsIconTheme: const IconThemeData(color: Colors.white, size: 24),
   );
 }
