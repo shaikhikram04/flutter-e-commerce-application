@@ -139,6 +139,29 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ],
               ),
+
+              //* Footer
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: IColors.grey,
+                      ),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Image.asset(
+                        IImages.google,
+                        height: ISizes.iconMd,
+                        width: ISizes.iconMd,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
