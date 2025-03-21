@@ -1,4 +1,4 @@
-class ITexts {
+class TTexts {
   //* Global text
   static const String appName = "T-Store";
   static const String tContinue = "Continue";

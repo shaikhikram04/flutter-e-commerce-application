@@ -1,4 +1,4 @@
-class IPricingCalculator {
+class TPricingCalculator {
   //* Calculate price based on tax and shipping
   static double calculateTotalPrice(double productPrice, String location) {
     double taxRate = getTaxRateForLocation(location);

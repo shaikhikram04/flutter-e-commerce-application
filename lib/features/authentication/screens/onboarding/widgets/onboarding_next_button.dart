@@ -13,16 +13,16 @@ class OnBoardingNextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = IHelperFunction.isDarkMode(context);
+    final dark = THelperFunction.isDarkMode(context);
 
     return Positioned(
-      right: ISizes.defaultSpace,
-      bottom: IDeviceUtils.getBottomNevigationBarHeight(),
+      right: TSizes.defaultSpace,
+      bottom: TDeviceUtils.getBottomNevigationBarHeight(),
       child: ElevatedButton(
         onPressed: () => OnBoardingController.instance.nextPage(),
         style: ElevatedButton.styleFrom(
           shape: const CircleBorder(),
-          backgroundColor: dark ? IColors.primary : Colors.black,
+          backgroundColor: dark ? TColors.primary : Colors.black,
         ),
         child: const Icon(Iconsax.arrow_right_3),
       ),
