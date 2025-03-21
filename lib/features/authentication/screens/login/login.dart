@@ -4,6 +4,7 @@ import 'package:flutter_e_commerce/utils/constants/image_strings.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:flutter_e_commerce/utils/constants/text_strings.dart';
 import 'package:flutter_e_commerce/utils/helpers/helper_functions.dart';
+import 'package:iconsax/iconsax.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -29,15 +30,32 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    ITexts.homeAppBarTitle,
+                    ITexts.loginTitle,
                     style: Theme.of(context).textTheme.headlineMedium,
                   ),
                   const SizedBox(height: ISizes.sm),
                   Text(
-                    ITexts.homeAppBarSubTitle,
+                    ITexts.loginSubTitle  ,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
+              ),
+
+              //* Form
+              Form(
+                child: Column(
+                  children: [
+                    //* Email
+                    TextFormField(
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(Iconsax.direct_right),
+                        labelText: ITexts.email,
+                      ),
+                    ),
+
+                    //* Password
+                  ],
+                ),
               )
             ],
           ),
