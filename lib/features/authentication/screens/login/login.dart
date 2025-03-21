@@ -35,7 +35,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: ISizes.sm),
                   Text(
-                    ITexts.loginSubTitle  ,
+                    ITexts.loginSubTitle,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
@@ -47,13 +47,60 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     //* Email
                     TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         prefixIcon: Icon(Iconsax.direct_right),
                         labelText: ITexts.email,
                       ),
                     ),
+                    const SizedBox(height: ISizes.spaceBtwInputFields),
 
                     //* Password
+                    TextFormField(
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(Iconsax.password_check),
+                        labelText: ITexts.password,
+                        suffixIcon: Icon(Iconsax.eye_slash),
+                      ),
+                    ),
+                    const SizedBox(height: ISizes.spaceBtwInputFields / 2),
+
+                    //* Remember me & Forgot password
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        //* Remember me
+                        Row(
+                          children: [
+                            Checkbox(value: true, onChanged: (value) {}),
+                            const Text(ITexts.rememberMe),
+                          ],
+                        ),
+
+                        //* Forgot password
+                        TextButton(
+                          onPressed: () {},
+                          child: const Text(ITexts.forgotPassword),
+                        ),
+                      ],
+                    ),
+
+                    //* Sign In Button
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: const Text(ITexts.signIn),
+                      ),
+                    ),
+
+                    //* Create Account Button
+                    SizedBox(
+                      width: double.infinity,
+                      child: OutlinedButton(
+                        onPressed: () {},
+                        child: const Text(ITexts.createAccount),
+                      ),
+                    ),
                   ],
                 ),
               )
