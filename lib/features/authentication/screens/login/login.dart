@@ -139,6 +139,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: ISizes.spaceBtwSections),
 
               //* Footer
               Row(
@@ -155,6 +156,23 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () {},
                       icon: Image.asset(
                         IImages.google,
+                        height: ISizes.iconMd,
+                        width: ISizes.iconMd,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: ISizes.spaceBtwItems),
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: IColors.grey,
+                      ),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Image.asset(
+                        IImages.facebook,
                         height: ISizes.iconMd,
                         width: ISizes.iconMd,
                       ),
