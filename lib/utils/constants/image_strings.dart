@@ -13,4 +13,10 @@ class TImages {
   static const String onBoardingImage1 = "assets/animations/searching.json";
   static const String onBoardingImage2 = "assets/animations/shopping.json";
   static const String onBoardingImage3 = "assets/animations/delivery.json";
+
+  //* Verification images
+  static const String emailVerificationImage =
+      "assets/animations/email_verification.json";
+  static const String accountCreatedImage =
+      "assets/animations/account_created.json";
 }

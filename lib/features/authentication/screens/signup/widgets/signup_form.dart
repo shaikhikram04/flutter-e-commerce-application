@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce/features/authentication/screens/signup/widgets/terms_conditions_checkbox.dart';
-import 'package:flutter_e_commerce/utils/constants/colors.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:flutter_e_commerce/utils/constants/text_strings.dart';
-import 'package:flutter_e_commerce/utils/helpers/helper_functions.dart';
 import 'package:iconsax/iconsax.dart';
 
 class TSignupForm extends StatelessWidget {
@@ -97,4 +95,3 @@ class TSignupForm extends StatelessWidget {
     );
   }
 }
-
