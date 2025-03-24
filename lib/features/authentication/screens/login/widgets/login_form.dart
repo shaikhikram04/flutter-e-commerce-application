@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_e_commerce/features/authentication/screens/signup/signup_screen.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:flutter_e_commerce/utils/constants/text_strings.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class TLoginForm extends StatelessWidget {
@@ -12,8 +14,7 @@ class TLoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-            vertical: TSizes.spaceBtwSections),
+        padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
         child: Column(
           children: [
             //* Email
@@ -24,7 +25,7 @@ class TLoginForm extends StatelessWidget {
               ),
             ),
             const SizedBox(height: TSizes.spaceBtwInputFields),
-    
+
             //* Password
             TextFormField(
               decoration: const InputDecoration(
@@ -34,7 +35,7 @@ class TLoginForm extends StatelessWidget {
               ),
             ),
             const SizedBox(height: TSizes.spaceBtwInputFields / 2),
-    
+
             //* Remember me & Forgot password
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -46,7 +47,7 @@ class TLoginForm extends StatelessWidget {
                     const Text(TTexts.rememberMe),
                   ],
                 ),
-    
+
                 //* Forgot password
                 TextButton(
                   onPressed: () {},
@@ -54,7 +55,7 @@ class TLoginForm extends StatelessWidget {
                 ),
               ],
             ),
-    
+
             //* Sign In Button
             SizedBox(
               width: double.infinity,
@@ -63,14 +64,14 @@ class TLoginForm extends StatelessWidget {
                 child: const Text(TTexts.signIn),
               ),
             ),
-    
+
             const SizedBox(height: TSizes.spaceBtwItems),
-    
+
             //* Create Account Button
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => const SignupScreen()),
                 child: const Text(TTexts.createAccount),
               ),
             ),

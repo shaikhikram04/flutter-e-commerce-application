@@ -51,8 +51,13 @@ class TTexts {
   static const String changeYourPasswordSubTitle =
       "Your account security is our priority! We have sent you a Secure link to safely change your password and keep your account protected.";
   static const String confirmEmailTitle = "Verify your email address";
-  static const String confirmEmailSubTitle = "Congratulations! Your account awaits: Verify your email to start shopping and experience the world of unrevated Deals and Personalized Offers.";
-  static const String emailNotReceivedMessage = "Didn't get the email? check your junk/spam or resend it.";
-  static const String yourAccountCreatedTitle = "Your account successfully created!";
-  static const String yourAccountCreatedSubTitle = "Welcome to your limitless shopping Destination: Your account is created, Unleash the Joy of Seamless Online Shopping!.";
+  static const String confirmEmailSubTitle =
+      "Congratulations! Your account awaits: Verify your email to start shopping and experience the world of unrevated Deals and Personalized Offers.";
+  static const String emailNotReceivedMessage =
+      "Didn't get the email? check your junk/spam or resend it.";
+  static const String yourAccountCreatedTitle =
+      "Your account successfully created!";
+  static const String yourAccountCreatedSubTitle =
+      "Welcome to your limitless shopping Destination: Your account is created, Unleash the Joy of Seamless Online Shopping!.";
+  static const String and = "and";
 }
