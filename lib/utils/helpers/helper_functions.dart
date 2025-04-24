@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class THelperFunction {
+  THelperFunction._();
+  
   static Color? getColor(String value) {
     if (value == 'Green') {
       return Colors.green;

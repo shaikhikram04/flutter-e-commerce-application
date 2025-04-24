@@ -14,6 +14,7 @@ class IAppBarTheme {
     titleTextStyle: ITextTheme.lightTextTheme.headlineSmall,
     actionsIconTheme: const IconThemeData(color: Colors.black, size: 24),
   );
+
   static AppBarTheme darkAppBarTheme = AppBarTheme(
     elevation: 0,
     centerTitle: false,

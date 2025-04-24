@@ -1,4 +1,5 @@
 class TSizes {
+  const TSizes._();
   //* padding and margin sizes
   static const double xs = 4.0;
   static const double sm = 8.0;
@@ -23,7 +24,7 @@ class TSizes {
   static const double buttonWidth = 120.0;
   static const double buttonElevation = 4.0;
 
-  //* Appbar height
+  //* AppBar height
   static const double appBarHeight = 56.0;
 
   //* Image Sizes
