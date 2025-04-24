@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce/common/style/spacing_styles.dart';
-import 'package:flutter_e_commerce/features/authentication/screens/login/login.dart';
-import 'package:flutter_e_commerce/utils/constants/image_strings.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:flutter_e_commerce/utils/constants/text_strings.dart';
 import 'package:flutter_e_commerce/utils/helpers/helper_functions.dart';
-import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
 class SuccessScreen extends StatelessWidget {
-  const SuccessScreen({super.key});
+  const SuccessScreen({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.subTitle,
+    required this.onPressed,
+  });
+
+  final String image, title, subTitle;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +27,7 @@ class SuccessScreen extends StatelessWidget {
             children: [
               //* Image
               Lottie.asset(
-                TImages.deliveredEmailIllustration,
+                image,
                 width: THelperFunction.screenWidth() * 0.6,
                 repeat: false,
               ),
@@ -29,23 +35,23 @@ class SuccessScreen extends StatelessWidget {
 
               //* Title & sub-title
               Text(
-                TTexts.yourAccountCreatedTitle,
+                title,
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: TSizes.spaceBtwItems),
               Text(
-                TTexts.yourAccountCreatedSubTitle,
+                subTitle,
                 style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: TSizes.spaceBtwSections),
 
               //* Buttons
-               SizedBox(
+              SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.offAll(()=>const LoginScreen()),
+                  onPressed: onPressed,
                   child: const Text(TTexts.tContinue),
                 ),
               ),

@@ -20,8 +20,6 @@ class TImages {
   //* Verification images
   static const String emailVerificationImage =
       "assets/images/animations/email_verification.json";
-  static const String accountCreatedImage =
-      "assets/images/animations/account_created.json";
 
   //! -- Animations
   static const String productsIllustration = "";
@@ -31,4 +29,6 @@ class TImages {
   static const String deliveredEmailIllustration =
       "assets/images/animations/delivered-email.json";
   static const String verifyIllustration = "";
+  static const String accountCreatedSuccessfully =
+      "assets/images/animations/account-created.json";
 }
