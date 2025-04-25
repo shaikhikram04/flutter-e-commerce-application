@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:flutter_e_commerce/features/authentication/screens/signup/signup_screen.dart';
+import 'package:flutter_e_commerce/navigation_menu.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:flutter_e_commerce/utils/constants/text_strings.dart';
 import 'package:get/get.dart';
@@ -62,11 +63,10 @@ class TLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.offAll(() => const NavigationMenu()),
                 child: const Text(TTexts.signIn),
               ),
             ),
-
             const SizedBox(height: TSizes.spaceBtwItems),
 
             //* Create Account Button
