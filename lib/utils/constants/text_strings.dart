@@ -61,5 +61,8 @@ class TTexts {
   static const String yourAccountCreatedSubTitle =
       "Welcome to your limitless shopping Destination: Your account is created, Unleash the Joy of Seamless Online Shopping!.";
   static const String and = "and";
+
+  //! Button text
   static const String submit = "Submit";
+  static const String done = "Done";
 }
