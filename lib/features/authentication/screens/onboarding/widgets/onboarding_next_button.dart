@@ -25,7 +25,10 @@ class OnBoardingNextButton extends StatelessWidget {
           backgroundColor: dark ? TColors.primary : Colors.black,
           foregroundColor: dark ? null : TColors.white,
         ),
-        child: const Icon(Iconsax.arrow_right_3),
+        child: const Icon(
+          Iconsax.arrow_right_3,
+          color: TColors.white,
+        ),
       ),
     );
   }

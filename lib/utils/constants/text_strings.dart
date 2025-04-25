@@ -1,4 +1,5 @@
 class TTexts {
+  const TTexts._();
   //* Global text
   static const String appName = "T-Store";
   static const String tContinue = "Continue";
@@ -60,4 +61,5 @@ class TTexts {
   static const String yourAccountCreatedSubTitle =
       "Welcome to your limitless shopping Destination: Your account is created, Unleash the Joy of Seamless Online Shopping!.";
   static const String and = "and";
+  static const String submit = "Submit";
 }

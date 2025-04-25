@@ -55,5 +55,5 @@ class TColors {
   static const Color grey = Color(0xFFE0E0E0);
   static const Color softGrey = Color(0xFFf4f4f4);
   static const Color lightGrey = Color(0xFFf9f9f9);
-  static const Color white = Color(0xFFffffff);
+  static const Color white = Color(0xffffffff);
 }
