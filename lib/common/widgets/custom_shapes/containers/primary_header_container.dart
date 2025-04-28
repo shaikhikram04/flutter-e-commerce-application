@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_e_commerce/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import 'package:flutter_e_commerce/common/widgets/custom_shapes/containers/circular_containers.dart';
+import 'package:flutter_e_commerce/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import 'package:flutter_e_commerce/utils/constants/colors.dart';
 
 class TPrimaryHeaderContainer extends StatelessWidget {
@@ -15,7 +15,7 @@ class TPrimaryHeaderContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return TCurvedEdgeWidget(
       child: Container(
-        height: 350,
+        height: 380,
         color: TColors.primary,
         padding: const EdgeInsets.all(0),
         child: Stack(

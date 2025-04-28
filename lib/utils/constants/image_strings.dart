@@ -31,4 +31,19 @@ class TImages {
   static const String verifyIllustration = "";
   static const String accountCreatedSuccessfully =
       "assets/images/animations/account-created.json";
+
+  //! Categories Icons
+  static const String sportIcon = "assets/icons/categories/animal.png";
+  static const String clothIcon = "assets/icons/categories/cloths.png";
+  static const String shoeIcon = "assets/icons/categories/running-shoes.png";
+  static const String cosmeticsIcon =
+      "assets/icons/categories/icons8-jewelry-96.png";
+  static const String animalIcon = "assets/icons/categories/animal.png";
+  static const String toyIcon = "assets/icons/categories/icons8-toy-100.png";
+  static const String furnitureIcon =
+      "assets/icons/categories/icons8-furniture-100.png";
+  static const String jewelryIcon =
+      "assets/icons/categories/icons8-jewelry-96.png";
+  static const String electronicsIcon =
+      "assets/icons/categories/icons8-mobile-phone-96.png";
 }
