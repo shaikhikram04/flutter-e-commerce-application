@@ -36,7 +36,7 @@ class TDeviceUtils {
     return MediaQuery.of(Get.context!).size.height;
   }
 
-  static double getScreenWidtht() {
+  static double getScreenWidth() {
     return MediaQuery.of(Get.context!).size.width;
   }
 
