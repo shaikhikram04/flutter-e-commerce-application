@@ -3,6 +3,7 @@ import 'package:flutter_e_commerce/common/style/shadows.dart';
 import 'package:flutter_e_commerce/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:flutter_e_commerce/common/widgets/images/t_rounded_image.dart';
 import 'package:flutter_e_commerce/utils/constants/colors.dart';
+import 'package:flutter_e_commerce/utils/constants/image_strings.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:flutter_e_commerce/utils/helpers/helper_functions.dart';
 
@@ -28,9 +29,9 @@ class TProductCardVertical extends StatelessWidget {
             height: 180,
             padding: const EdgeInsets.all(TSizes.sm),
             backgroundColor: dark ? TColors.dark : TColors.light,
-            child: Stack(
+            child: const Stack(
               children: [
-                TRoundedImage(imageUrl: ''),
+                TRoundedImage(imageUrl: TImages.product1),
               ],
             ),
           ),
