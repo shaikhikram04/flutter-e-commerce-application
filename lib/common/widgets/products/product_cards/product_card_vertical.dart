@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce/common/style/shadows.dart';
 import 'package:flutter_e_commerce/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:flutter_e_commerce/common/widgets/icons/circular_icon.dart';
 import 'package:flutter_e_commerce/common/widgets/images/t_rounded_image.dart';
 import 'package:flutter_e_commerce/utils/constants/colors.dart';
 import 'package:flutter_e_commerce/utils/constants/image_strings.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:flutter_e_commerce/utils/helpers/helper_functions.dart';
+import 'package:iconsax/iconsax.dart';
 
 class TProductCardVertical extends StatelessWidget {
   const TProductCardVertical({super.key});
@@ -29,9 +31,39 @@ class TProductCardVertical extends StatelessWidget {
             height: 180,
             padding: const EdgeInsets.all(TSizes.sm),
             backgroundColor: dark ? TColors.dark : TColors.light,
-            child: const Stack(
+            child: Stack(
               children: [
-                TRoundedImage(imageUrl: TImages.product1),
+                //* Thumbnail image
+                const TRoundedImage(
+                  imageUrl: TImages.product1,
+                  applyImageRadius: true,
+                ),
+
+                //* sale tag
+                Positioned(
+                  top: 12,
+                  child: TRoundedContainer(
+                    radius: TSizes.cardRadiusSm,
+                    backgroundColor: TColors.secondary.withValues(alpha: 0.8),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: TSizes.sm, vertical: TSizes.xs),
+                    child: Text(
+                      '25%',
+                      style: Theme.of(context)
+                          .textTheme
+                          .labelLarge!
+                          .apply(color: TColors.black, fontWeightDelta: 2),
+                    ),
+                  ),
+                ),
+
+                //* Favourite icon button
+                const Positioned(
+                  top: 0,
+                  right: 0,
+                  child: TCircularIcon(
+                      icon: Iconsax.heart5, color: Colors.red),
+                ),
               ],
             ),
           ),
