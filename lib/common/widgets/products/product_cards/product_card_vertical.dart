@@ -3,6 +3,7 @@ import 'package:flutter_e_commerce/common/style/shadows.dart';
 import 'package:flutter_e_commerce/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:flutter_e_commerce/common/widgets/icons/circular_icon.dart';
 import 'package:flutter_e_commerce/common/widgets/images/t_rounded_image.dart';
+import 'package:flutter_e_commerce/common/widgets/text/product_title_text.dart';
 import 'package:flutter_e_commerce/utils/constants/colors.dart';
 import 'package:flutter_e_commerce/utils/constants/image_strings.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
@@ -57,18 +58,21 @@ class TProductCardVertical extends StatelessWidget {
                   ),
                 ),
 
-                //* Favourite icon button
+                //* Favorite icon button
                 const Positioned(
                   top: 0,
                   right: 0,
-                  child: TCircularIcon(
-                      icon: Iconsax.heart5, color: Colors.red),
+                  child: TCircularIcon(icon: Iconsax.heart5, color: Colors.red),
                 ),
               ],
             ),
           ),
 
           //* Details
+          const Padding(
+            padding: EdgeInsets.only(left: TSizes.sm),
+            child: TProductTitleText(text: "Acer 15'6'' inches Laptop", smallSize: true),
+          ),
         ],
       ),
     );

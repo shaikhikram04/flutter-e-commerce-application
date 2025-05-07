@@ -52,7 +52,7 @@ class ITextTheme {
     labelLarge: const TextStyle().copyWith(
       fontSize: 12,
       color: Colors.black,
-      fontWeight: FontWeight.normal,
+      fontWeight: FontWeight.w500,
     ),
     labelMedium: const TextStyle().copyWith(
       fontSize: 12,
@@ -110,7 +110,7 @@ class ITextTheme {
     labelLarge: const TextStyle().copyWith(
       fontSize: 12,
       color: Colors.white,
-      fontWeight: FontWeight.normal,
+      fontWeight: FontWeight.w500,
     ),
     labelMedium: const TextStyle().copyWith(
       fontSize: 12,
