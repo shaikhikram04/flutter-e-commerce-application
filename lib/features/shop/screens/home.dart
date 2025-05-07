@@ -64,9 +64,9 @@ class Home extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: TSizes.spaceBtwSections),
-                  
+
                   //* Popular Products
-                  TProductCardVertical(), 
+                  TProductCardVertical(),
                 ],
               ),
             ),
