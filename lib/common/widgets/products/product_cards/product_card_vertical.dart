@@ -3,6 +3,7 @@ import 'package:flutter_e_commerce/common/style/shadows.dart';
 import 'package:flutter_e_commerce/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:flutter_e_commerce/common/widgets/icons/circular_icon.dart';
 import 'package:flutter_e_commerce/common/widgets/images/t_rounded_image.dart';
+import 'package:flutter_e_commerce/common/widgets/text/product_price_text.dart';
 import 'package:flutter_e_commerce/common/widgets/text/product_title_text.dart';
 import 'package:flutter_e_commerce/utils/constants/colors.dart';
 import 'package:flutter_e_commerce/utils/constants/image_strings.dart';
@@ -37,7 +38,7 @@ class TProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   //* Thumbnail image
-                  const TRoundedImage(imageUrl: TImages.product1, applyImageRadius: true),
+                  const Center(child: TRoundedImage(imageUrl: TImages.product1, applyImageRadius: true)),
 
                   //* sale tag
                   Positioned(
@@ -81,15 +82,11 @@ class TProductCardVertical extends StatelessWidget {
                     ],
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //* Price
-                      Text(
-                        '\$500',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
+                      const TProductPriceText(price: '500', isLarge: true),
+
+                      //* Add to cart button
                       Container(
                         decoration: const BoxDecoration(
                           color: TColors.dark,
@@ -105,7 +102,7 @@ class TProductCardVertical extends StatelessWidget {
                         ),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),

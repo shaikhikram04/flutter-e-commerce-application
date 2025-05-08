@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:flutter_e_commerce/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:flutter_e_commerce/common/widgets/layouts/grid_layout.dart';
 import 'package:flutter_e_commerce/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:flutter_e_commerce/common/widgets/text/section_heading.dart';
 import 'package:flutter_e_commerce/features/shop/screens/widgets/home_app_bar.dart';
@@ -15,11 +16,11 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   //* AppBar
@@ -52,21 +53,21 @@ class Home extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(TSizes.defaultSpace),
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
                   //* Promo Slider
-                  TPromoSlider(
+                  const TPromoSlider(
                     banner: [
                       TImages.promoBanner1,
                       TImages.promoBanner2,
                       TImages.promoBanner3,
                     ],
                   ),
-                  SizedBox(height: TSizes.spaceBtwSections),
+                  const SizedBox(height: TSizes.spaceBtwSections),
 
                   //* Popular Products
-                  TProductCardVertical(),
+                  TGridLayout(itemCount: 5, itemBuilder: (_, index) => const TProductCardVertical(),),
                 ],
               ),
             ),
