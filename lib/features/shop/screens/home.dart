@@ -57,17 +57,18 @@ class Home extends StatelessWidget {
               child: Column(
                 children: [
                   //* Promo Slider
-                  const TPromoSlider(
-                    banner: [
-                      TImages.promoBanner1,
-                      TImages.promoBanner2,
-                      TImages.promoBanner3,
-                    ],
-                  ),
+                  const TPromoSlider(banner: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3]),
                   const SizedBox(height: TSizes.spaceBtwSections),
 
+                  //* Heading
+                  TSectionHeading(title: 'Popular Products', onPressed: () {}),
+                  const SizedBox(height: TSizes.spaceBtwItems),
+
                   //* Popular Products
-                  TGridLayout(itemCount: 5, itemBuilder: (_, index) => const TProductCardVertical(),),
+                  TGridLayout(
+                    itemCount: 5,
+                    itemBuilder: (_, index) => const TProductCardVertical(),
+                  ),
                 ],
               ),
             ),

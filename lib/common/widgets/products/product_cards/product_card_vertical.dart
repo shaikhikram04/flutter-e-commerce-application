@@ -38,7 +38,12 @@ class TProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   //* Thumbnail image
-                  const Center(child: TRoundedImage(imageUrl: TImages.product1, applyImageRadius: true)),
+                  Center(
+                      child: TRoundedImage(
+                    imageUrl: TImages.product1,
+                    applyImageRadius: true,
+                    backgroundColor: dark ? TColors.dark : TColors.light,
+                  )),
 
                   //* sale tag
                   Positioned(
@@ -81,27 +86,34 @@ class TProductCardVertical extends StatelessWidget {
                       const Icon(Iconsax.verify5, color: TColors.primary, size: TSizes.iconXs),
                     ],
                   ),
-                  Row(
-                    children: [
-                      //* Price
-                      const TProductPriceText(price: '500', isLarge: true),
+                ],
+              ),
+            ),
 
-                      //* Add to cart button
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: TColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(TSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(TSizes.productImageRadius),
-                          ),
-                        ),
-                        child: const SizedBox(
-                          width: TSizes.iconLg * 1.2,
-                          height: TSizes.iconLg * 1.2,
-                          child: Center(child: Icon(Iconsax.add, color: TColors.white)),
-                        ),
+            const Spacer(),
+
+            Padding(
+              padding: const EdgeInsets.only(left: TSizes.sm),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  //* Price
+                  const TProductPriceText(price: '500'),
+
+                  //* Add to cart button
+                  Container(
+                    decoration: const BoxDecoration(
+                      color: TColors.dark,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(TSizes.cardRadiusMd),
+                        bottomRight: Radius.circular(TSizes.productImageRadius),
                       ),
-                    ],
+                    ),
+                    child: const SizedBox(
+                      width: TSizes.iconLg * 1.2,
+                      height: TSizes.iconLg * 1.2,
+                      child: Center(child: Icon(Iconsax.add, color: TColors.white)),
+                    ),
                   ),
                 ],
               ),
