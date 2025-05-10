@@ -4,9 +4,9 @@ import 'package:flutter_e_commerce/common/widgets/custom_shapes/containers/searc
 import 'package:flutter_e_commerce/common/widgets/layouts/grid_layout.dart';
 import 'package:flutter_e_commerce/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:flutter_e_commerce/common/widgets/text/section_heading.dart';
-import 'package:flutter_e_commerce/features/shop/screens/widgets/home_app_bar.dart';
-import 'package:flutter_e_commerce/features/shop/screens/widgets/home_categories.dart';
-import 'package:flutter_e_commerce/features/shop/screens/widgets/promo_slider.dart';
+import 'package:flutter_e_commerce/features/shop/screens/home/widgets/home_app_bar.dart';
+import 'package:flutter_e_commerce/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:flutter_e_commerce/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:flutter_e_commerce/utils/constants/colors.dart';
 import 'package:flutter_e_commerce/utils/constants/image_strings.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';

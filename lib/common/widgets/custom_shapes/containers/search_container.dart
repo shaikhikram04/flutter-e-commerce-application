@@ -12,11 +12,13 @@ class TSearchContainer extends StatelessWidget {
     this.icon = Iconsax.search_normal,
     this.showBackground = true,
     this.showBorder = true,
+    this.margin = const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
   });
 
   final String text;
   final IconData? icon;
   final bool showBackground, showBorder;
+  final EdgeInsetsGeometry margin;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class TSearchContainer extends StatelessWidget {
 
     return Container(
       width: TDeviceUtils.getScreenWidth(),
-      margin: const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
+      margin: margin,
       padding: const EdgeInsets.all(TSizes.md),
       decoration: BoxDecoration(
         color: showBackground

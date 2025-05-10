@@ -17,25 +17,16 @@ class THomeAppBar extends StatelessWidget {
         children: [
           Text(
             TTexts.homeAppBarTitle,
-            style: Theme.of(context)
-                .textTheme
-                .labelMedium!
-                .apply(color: TColors.grey),
+            style: Theme.of(context).textTheme.labelMedium!.apply(color: TColors.grey),
           ),
           Text(
             TTexts.homeAppBarSubTitle,
-            style: Theme.of(context)
-                .textTheme
-                .headlineSmall!
-                .apply(color: TColors.white),
+            style: Theme.of(context).textTheme.headlineSmall!.apply(color: TColors.white),
           ),
         ],
       ),
       actions: [
-        TCartCounterIcon(
-          onPressed: () {},
-          iconColor: TColors.white,
-        ),
+        TCartCounterIcon(onPressed: () {}, iconColor: TColors.white),
       ],
     );
   }

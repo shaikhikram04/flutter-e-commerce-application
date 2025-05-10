@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_e_commerce/features/shop/screens/home.dart';
+import 'package:flutter_e_commerce/features/shop/screens/home/home.dart';
+import 'package:flutter_e_commerce/features/shop/screens/store/store.dart';
 import 'package:flutter_e_commerce/utils/constants/colors.dart';
 import 'package:flutter_e_commerce/utils/helpers/helper_functions.dart';
 import 'package:get/get.dart';
@@ -19,29 +20,14 @@ class NavigationMenu extends StatelessWidget {
           height: 80,
           elevation: 0,
           selectedIndex: controller.selectionIndex.value,
-          onDestinationSelected: (index) =>
-              controller.selectionIndex.value = index,
+          onDestinationSelected: (index) => controller.selectionIndex.value = index,
           backgroundColor: isDarkMode ? TColors.black : TColors.white,
-          indicatorColor: isDarkMode
-              ? TColors.white.withValues(alpha: 0.1)
-              : TColors.dark.withValues(alpha: 0.1),
+          indicatorColor: isDarkMode ? TColors.white.withValues(alpha: 0.1) : TColors.dark.withValues(alpha: 0.1),
           destinations: const [
-            NavigationDestination(
-              icon: Icon(Iconsax.home),
-              label: 'Home',
-            ),
-            NavigationDestination(
-              icon: Icon(Iconsax.shop),
-              label: 'Store',
-            ),
-            NavigationDestination(
-              icon: Icon(Iconsax.heart),
-              label: 'Wishlist',
-            ),
-            NavigationDestination(
-              icon: Icon(Iconsax.user),
-              label: 'Profile',
-            ),
+            NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
+            NavigationDestination(icon: Icon(Iconsax.shop), label: 'Store'),
+            NavigationDestination(icon: Icon(Iconsax.heart), label: 'Wishlist'),
+            NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile'),
           ],
         ),
       ),
@@ -55,7 +41,7 @@ class NavigationController extends GetxController {
 
   final List<Widget> screens = [
     const Home(),
-    Container(color: Colors.yellow),
+    const StoreScreen(),
     Container(color: Colors.green),
     Container(color: Colors.purple),
   ];

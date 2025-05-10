@@ -6,6 +6,7 @@ import 'package:flutter_e_commerce/common/widgets/images/t_rounded_image.dart';
 import 'package:flutter_e_commerce/common/widgets/text/product_price_text.dart';
 import 'package:flutter_e_commerce/common/widgets/text/product_title_text.dart';
 import 'package:flutter_e_commerce/utils/constants/colors.dart';
+import 'package:flutter_e_commerce/utils/constants/enums.dart';
 import 'package:flutter_e_commerce/utils/constants/image_strings.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:flutter_e_commerce/utils/helpers/helper_functions.dart';
@@ -67,25 +68,14 @@ class TProductCardVertical extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBtwItems / 2),
 
             //* Details
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const TProductTitleText(text: "Acer 15'6'' inches Laptop", smallSize: true),
-                  const SizedBox(height: TSizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text(
-                        'Acer',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(width: TSizes.xs),
-                      const Icon(Iconsax.verify5, color: TColors.primary, size: TSizes.iconXs),
-                    ],
-                  ),
+                  TProductTitleText(text: "Acer 15'6'' inches Laptop", smallSize: true),
+                  SizedBox(height: TSizes.spaceBtwItems / 2),
+                  TBrandTitleWithVerifiedIcon(title: 'Acer'),
                 ],
               ),
             ),
@@ -121,6 +111,70 @@ class TProductCardVertical extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class TBrandTitleWithVerifiedIcon extends StatelessWidget {
+  const TBrandTitleWithVerifiedIcon({
+    super.key,
+    required this.title,
+    this.maxLine = 1,
+    this.textColor,
+    this.iconColor = TColors.primary,
+    this.textAlign = TextAlign.center,
+    this.brandTextSize = TextSizes.small,
+  });
+
+  final String title;
+  final int maxLine;
+  final Color? textColor, iconColor;
+  final TextAlign? textAlign;
+  final TextSizes brandTextSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Flexible(
+          child: TBrandTitleText(
+            title: title,
+            color: textColor,
+            maxLine: maxLine,
+            textAlign: textAlign,
+            brandTextSize: brandTextSize,
+          ),
+        ),
+        const SizedBox(width: TSizes.xs),
+        Icon(Iconsax.verify5, color: iconColor, size: TSizes.iconXs),
+      ],
+    );
+  }
+}
+
+class TBrandTitleText extends StatelessWidget {
+  const TBrandTitleText({
+    super.key,
+    required this.title,
+    required this.color,
+    this.maxLine = 1,
+    this.textAlign = TextAlign.center,
+    this.brandTextSize = TextSizes.small,
+  });
+
+  final String title;
+  final Color? color;
+  final int maxLine;
+  final TextAlign? textAlign;
+  final TextSizes brandTextSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      title,
+      overflow: TextOverflow.ellipsis,
+      maxLines: 1,
+      style: Theme.of(context).textTheme.labelMedium,
     );
   }
 }
