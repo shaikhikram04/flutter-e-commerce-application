@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_e_commerce/utils/constants/colors.dart';
 import 'package:flutter_e_commerce/utils/theme/custom_theme.dart/app_bar_theme.dart';
 import 'package:flutter_e_commerce/utils/theme/custom_theme.dart/bottom_sheet_theme.dart';
 import 'package:flutter_e_commerce/utils/theme/custom_theme.dart/checkbox_theme.dart';
@@ -16,7 +17,7 @@ class IAppTheme {
     fontFamily: 'Poppins',
     brightness: Brightness.light,
     primaryColor: Colors.blue,
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: TColors.white,
     textTheme: ITextTheme.lightTextTheme,
     elevatedButtonTheme: IElevatedButtonTheme.lightElevatedButtonTheme,
     chipTheme: IChipTheme.lightChipTheme,
@@ -32,7 +33,7 @@ class IAppTheme {
     fontFamily: 'Poppins',
     brightness: Brightness.dark,
     primaryColor: Colors.blue,
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: TColors.black,
     textTheme: ITextTheme.darkTextTheme,
     elevatedButtonTheme: IElevatedButtonTheme.darkElevatedButtonTheme,
     chipTheme: IChipTheme.darkChipTheme,

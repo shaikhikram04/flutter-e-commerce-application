@@ -52,12 +52,15 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: TPromoSlider(banner: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3]),
+            ),
             Padding(
               padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
                   //* Promo Slider
-                  const TPromoSlider(banner: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3]),
                   const SizedBox(height: TSizes.spaceBtwSections),
 
                   //* Heading

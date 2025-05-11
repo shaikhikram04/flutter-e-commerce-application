@@ -41,9 +41,7 @@ class TPromoSlider extends StatelessWidget {
                 TCircularContainer(
                   width: 20,
                   height: 4,
-                  backgroundColor: controller.carouselCurrentIndex.value == i
-                      ? TColors.primary
-                      : TColors.grey,
+                  backgroundColor: controller.carouselCurrentIndex.value == i ? TColors.primary : TColors.grey,
                   margin: const EdgeInsets.only(right: 10),
                 ),
             ],
