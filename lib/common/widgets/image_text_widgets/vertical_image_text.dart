@@ -9,7 +9,7 @@ class TVerticalImageText extends StatelessWidget {
     required this.image,
     required this.title,
     this.textColor = TColors.white,
-    this.backgroundColor = TColors.white,
+    this.backgroundColor,
     required this.onTap,
   });
 
@@ -40,7 +40,7 @@ class TVerticalImageText extends StatelessWidget {
                 child: Image(
                   image: AssetImage(image),
                   fit: BoxFit.cover,
-                  color: TColors.dark,
+                  color: dark ? TColors.light : TColors.dark,
                 ),
               ),
             ),

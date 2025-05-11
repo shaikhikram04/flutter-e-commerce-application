@@ -28,7 +28,7 @@ class Home extends StatelessWidget {
                   SizedBox(height: TSizes.spaceBtwSections),
 
                   //* SearchBar
-                  TSearchContainer(text: 'Search in Store'),
+                  TSearchContainer(text: 'Search in Store', showBorder: false),
                   SizedBox(height: TSizes.spaceBtwSections),
 
                   //* Categories
