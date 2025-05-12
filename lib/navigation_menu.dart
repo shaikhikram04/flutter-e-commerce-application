@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce/features/shop/screens/home/home.dart';
 import 'package:flutter_e_commerce/features/shop/screens/store/store.dart';
+import 'package:flutter_e_commerce/features/wishlist/wishlist.dart';
 import 'package:flutter_e_commerce/utils/constants/colors.dart';
 import 'package:flutter_e_commerce/utils/helpers/helper_functions.dart';
 import 'package:get/get.dart';
@@ -40,9 +41,9 @@ class NavigationController extends GetxController {
   final RxInt selectionIndex = 0.obs;
 
   final List<Widget> screens = [
-    const Home(),
+    const HomeScreen(),
     const StoreScreen(),
-    Container(color: Colors.green),
+    const FavoriteScreen(),
     Container(color: Colors.purple),
   ];
 }
