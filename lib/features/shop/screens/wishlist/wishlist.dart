@@ -6,7 +6,7 @@ import 'package:flutter_e_commerce/common/widgets/products/product_cards/product
 import 'package:flutter_e_commerce/features/shop/screens/home/home.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
+import 'package:iconsax/iconsax.dart'; 
 
 class FavoriteScreen extends StatelessWidget {
   const FavoriteScreen({super.key});
