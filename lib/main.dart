@@ -6,7 +6,7 @@ import 'package:flutter_e_commerce/app.dart';
 void main() {
   runApp(kIsWeb
       ? DevicePreview(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.grey,
           enabled: true,
           defaultDevice: Devices.android.samsungGalaxyS20,
           isToolbarVisible: true,
