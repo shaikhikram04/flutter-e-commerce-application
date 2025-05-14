@@ -5,9 +5,9 @@ import 'package:flutter_e_commerce/utils/constants/image_strings.dart';
 import 'package:iconsax/iconsax.dart';
 
 class TUserProfileTile extends StatelessWidget {
-  const TUserProfileTile({
-    super.key,
-  });
+  const TUserProfileTile({super.key, required this.onPressed});
+
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +17,7 @@ class TUserProfileTile extends StatelessWidget {
       subtitle:
           Text('support@ikramshaikh.com', style: Theme.of(context).textTheme.bodyMedium!.apply(color: TColors.white)),
       trailing: IconButton(onPressed: () {}, icon: const Icon(Iconsax.edit, color: TColors.white)),
+      onTap: onPressed,
     );
   }
 }

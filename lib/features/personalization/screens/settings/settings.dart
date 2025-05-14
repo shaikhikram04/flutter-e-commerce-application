@@ -4,7 +4,9 @@ import 'package:flutter_e_commerce/common/widgets/custom_shapes/containers/prima
 import 'package:flutter_e_commerce/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:flutter_e_commerce/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:flutter_e_commerce/common/widgets/text/section_heading.dart';
+import 'package:flutter_e_commerce/features/personalization/screens/profile/profile.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -17,14 +19,16 @@ class SettingsScreen extends StatelessWidget {
         child: Column(
           children: [
             //* Header
-            const TPrimaryHeaderContainer(
+            TPrimaryHeaderContainer(
               child: Column(
                 children: [
-                  TAppBar(title: Text('Account')),
+                  const TAppBar(title: Text('Account')),
 
                   //* User profile card
-                  TUserProfileTile(),
-                  SizedBox(height: TSizes.spaceBtwSections),
+                  TUserProfileTile(
+                    onPressed: () => Get.to(() => const ProfileScreen()),
+                  ),
+                  const SizedBox(height: TSizes.spaceBtwSections),
                 ],
               ),
             ),
