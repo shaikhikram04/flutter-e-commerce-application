@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_e_commerce/utils/constants/colors.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
-import 'package:flutter_e_commerce/utils/helpers/helper_functions.dart';
 
 class TCircularImage extends StatelessWidget {
   const TCircularImage({
@@ -25,8 +23,6 @@ class TCircularImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunction.isDarkMode(context);
-
     return Container(
       width: width,
       height: height,
@@ -38,7 +34,7 @@ class TCircularImage extends StatelessWidget {
       child: Center(
         child: Image(
           image: isNetworkImage ? NetworkImage(image) : AssetImage(image) as ImageProvider,
-          color: overlayColor ?? (dark ? TColors.white : TColors.black),
+          color: overlayColor,
           fit: fit,
         ),
       ),

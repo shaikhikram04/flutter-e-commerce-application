@@ -36,7 +36,7 @@ class SettingsScreen extends StatelessWidget {
                 children: [
                   //* Title
                   const TSectionHeading(title: 'Account Settings', showActionButton: false),
-                  SizedBox(height: TSizes.spaceBtwItems),
+                  const SizedBox(height: TSizes.spaceBtwItems),
 
                   const TSettingsMenuTile(
                     title: 'My Address',

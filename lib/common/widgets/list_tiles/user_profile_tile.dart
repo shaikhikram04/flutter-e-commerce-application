@@ -12,7 +12,7 @@ class TUserProfileTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: const TCircularImage(image: TImages.user, height: 50, width: 50, padding: 0),
+      leading: const TCircularImage(image: TImages.user, height: 50, width: 50, padding: 0, overlayColor: null),
       title: Text('Ikram Shaikh', style: Theme.of(context).textTheme.headlineSmall!.apply(color: TColors.white)),
       subtitle:
           Text('support@ikramshaikh.com', style: Theme.of(context).textTheme.bodyMedium!.apply(color: TColors.white)),
