@@ -72,7 +72,7 @@ class TProductAttributes extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const TSectionHeading(title: 'Colors'),
+            const TSectionHeading(title: 'Colors', showActionButton: false),
             const SizedBox(height: TSizes.spaceBtwItems / 2),
             Wrap(
               spacing: TSizes.spaceBtwItems / 2,
@@ -87,7 +87,7 @@ class TProductAttributes extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const TSectionHeading(title: 'Sizes'),
+            const TSectionHeading(title: 'Sizes', showActionButton: false),
             const SizedBox(height: TSizes.spaceBtwItems / 2),
             Wrap(
               spacing: TSizes.spaceBtwItems / 2,
