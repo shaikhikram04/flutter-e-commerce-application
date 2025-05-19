@@ -33,6 +33,7 @@ dependencies:
   #? Products specific features
   readmore: ^3.0.0
   carousel_slider_plus: ^7.1.0
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_lints: ^5.0.0
@@ -51,6 +52,7 @@ flutter:
     - assets/images/banners/
     - assets/images/products/
     - assets/images/user/
+    - assets/images/reviews/
 
   fonts:
     - family: Poppins
