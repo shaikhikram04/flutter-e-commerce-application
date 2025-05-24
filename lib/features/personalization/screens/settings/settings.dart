@@ -4,6 +4,7 @@ import 'package:flutter_e_commerce/common/widgets/custom_shapes/containers/prima
 import 'package:flutter_e_commerce/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:flutter_e_commerce/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:flutter_e_commerce/common/widgets/text/section_heading.dart';
+import 'package:flutter_e_commerce/features/personalization/screens/address/address.dart';
 import 'package:flutter_e_commerce/features/personalization/screens/profile/profile.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:get/get.dart';
@@ -42,10 +43,11 @@ class SettingsScreen extends StatelessWidget {
                   const TSectionHeading(title: 'Account Settings', showActionButton: false),
                   const SizedBox(height: TSizes.spaceBtwItems),
 
-                  const TSettingsMenuTile(
+                  TSettingsMenuTile(
                     title: 'My Address',
                     subtitle: 'Set shopping delivery address',
                     icon: Iconsax.safe_home,
+                    onTap: () => Get.to(() => const UserAddressScreen()),
                   ),
                   const TSettingsMenuTile(
                     title: 'My Cart',
