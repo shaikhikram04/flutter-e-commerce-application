@@ -23,7 +23,11 @@ class SettingsScreen extends StatelessWidget {
             TPrimaryHeaderContainer(
               child: Column(
                 children: [
-                  const TAppBar(title: Text('Account')),
+                  TAppBar(
+                      title: Text(
+                    'Account',
+                    style: const TextStyle().copyWith(color: Colors.white),
+                  )),
 
                   //* User profile card
                   TUserProfileTile(

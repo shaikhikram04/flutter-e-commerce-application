@@ -11,7 +11,7 @@ class IAppBarTheme {
     backgroundColor: Colors.transparent,
     foregroundColor: Colors.transparent,
     iconTheme: const IconThemeData(color: Colors.black, size: 24),
-    titleTextStyle: ITextTheme.lightTextTheme.headlineSmall,
+    titleTextStyle: ITextTheme.lightTextTheme.headlineMedium,
     actionsIconTheme: const IconThemeData(color: Colors.black, size: 24),
   );
 
