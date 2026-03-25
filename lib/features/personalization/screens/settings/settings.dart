@@ -6,6 +6,7 @@ import 'package:flutter_e_commerce/common/widgets/list_tiles/user_profile_tile.d
 import 'package:flutter_e_commerce/common/widgets/text/section_heading.dart';
 import 'package:flutter_e_commerce/features/personalization/screens/address/address.dart';
 import 'package:flutter_e_commerce/features/personalization/screens/profile/profile.dart';
+import 'package:flutter_e_commerce/features/shop/screens/order/order.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -44,7 +45,8 @@ class SettingsScreen extends StatelessWidget {
               child: Column(
                 children: [
                   //* Title
-                  const TSectionHeading(title: 'Account Settings', showActionButton: false),
+                  const TSectionHeading(
+                      title: 'Account Settings', showActionButton: false),
                   const SizedBox(height: TSizes.spaceBtwItems),
 
                   TSettingsMenuTile(
@@ -58,10 +60,11 @@ class SettingsScreen extends StatelessWidget {
                     subtitle: 'Add, remove products and move to checkout',
                     icon: Iconsax.shopping_cart,
                   ),
-                  const TSettingsMenuTile(
+                  TSettingsMenuTile(
                     title: 'My Order',
                     subtitle: 'In-progress and Completed Order',
                     icon: Iconsax.bag_tick,
+                    onTap: () => Get.to(() => const OrderScreen()),
                   ),
                   const TSettingsMenuTile(
                       title: 'Bank Account',
@@ -85,7 +88,8 @@ class SettingsScreen extends StatelessWidget {
 
                   //* App Settings
                   const SizedBox(height: TSizes.spaceBtwSections),
-                  const TSectionHeading(title: 'App Settings', showActionButton: false),
+                  const TSectionHeading(
+                      title: 'App Settings', showActionButton: false),
                   const SizedBox(height: TSizes.spaceBtwItems),
                   const TSettingsMenuTile(
                     title: 'Load Data',
@@ -115,7 +119,8 @@ class SettingsScreen extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwSections),
                   SizedBox(
                     width: double.infinity,
-                    child: OutlinedButton(onPressed: () {}, child: const Text('Logout')),
+                    child: OutlinedButton(
+                        onPressed: () {}, child: const Text('Logout')),
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections * 2),
                 ],
