@@ -25,10 +25,14 @@ class TPricingCalculator {
   }
 
   static double getTaxRateForLocation(String location) {
+    // look up tax rate based on location
+    // return tax rate as a decimal (e.g., 0.10 for 10%)
     return 0.10;
   }
 
   static double getShippingCost(String location) {
+    // look up shipping cost based on location
+    // return shipping cost based on various factors (e.g., distance, weight)
     return 5.0;
   }
 

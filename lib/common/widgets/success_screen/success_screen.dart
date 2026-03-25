@@ -26,11 +26,18 @@ class SuccessScreen extends StatelessWidget {
           child: Column(
             children: [
               //* Image
-              Lottie.asset(
-                image,
-                width: THelperFunction.screenWidth() * 0.6,
-                repeat: false,
-              ),
+              if (image.endsWith('.json'))
+                Lottie.asset(
+                  image,
+                  width: THelperFunction.screenWidth() * 0.6,
+                  repeat: false,
+                )
+              else
+                Image.asset(
+                  image,
+                  width: THelperFunction.screenWidth() * 0.5,
+                  fit: BoxFit.contain,
+                ),
               const SizedBox(height: TSizes.spaceBtwSections),
 
               //* Title & sub-title
