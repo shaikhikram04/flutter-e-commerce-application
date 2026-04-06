@@ -4,12 +4,15 @@ import 'package:flutter_e_commerce/common/widgets/custom_shapes/containers/searc
 import 'package:flutter_e_commerce/common/widgets/layouts/grid_layout.dart';
 import 'package:flutter_e_commerce/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:flutter_e_commerce/common/widgets/text/section_heading.dart';
+import 'package:flutter_e_commerce/features/shop/screens/all_products/all_products.dart';
 import 'package:flutter_e_commerce/features/shop/screens/home/widgets/home_app_bar.dart';
 import 'package:flutter_e_commerce/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:flutter_e_commerce/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:flutter_e_commerce/utils/constants/colors.dart';
 import 'package:flutter_e_commerce/utils/constants/image_strings.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -66,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwSections),
 
                   //* Heading
-                  TSectionHeading(title: 'Popular Products', onPressed: () {}),
+                  TSectionHeading(title: 'Popular Products', onPressed: () => Get.to(() => const AllProducts()), showActionButton: true),
                   const SizedBox(height: TSizes.spaceBtwItems),
 
                   //* Popular Products
