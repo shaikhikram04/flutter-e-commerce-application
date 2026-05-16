@@ -6,10 +6,12 @@ import 'package:flutter_e_commerce/common/widgets/custom_shapes/containers/searc
 import 'package:flutter_e_commerce/common/widgets/layouts/grid_layout.dart';
 import 'package:flutter_e_commerce/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:flutter_e_commerce/common/widgets/text/section_heading.dart';
+import 'package:flutter_e_commerce/features/shop/screens/brand/all_brands.dart';
 import 'package:flutter_e_commerce/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:flutter_e_commerce/utils/constants/colors.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:flutter_e_commerce/utils/helpers/helper_functions.dart';
+import 'package:get/route_manager.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
@@ -20,7 +22,8 @@ class StoreScreen extends StatelessWidget {
       length: 5,
       child: Scaffold(
         appBar: TAppBar(
-          title: Text('Store', style: Theme.of(context).textTheme.headlineMedium),
+          title:
+              Text('Store', style: Theme.of(context).textTheme.headlineMedium),
           actions: [TCartCounterIcon(onPressed: () {})],
         ),
         body: NestedScrollView(
@@ -29,7 +32,9 @@ class StoreScreen extends StatelessWidget {
               automaticallyImplyLeading: false,
               pinned: true,
               floating: true,
-              backgroundColor: THelperFunction.isDarkMode(context) ? TColors.black : TColors.white,
+              backgroundColor: THelperFunction.isDarkMode(context)
+                  ? TColors.black
+                  : TColors.white,
               expandedHeight: 400,
               flexibleSpace: Padding(
                 padding: const EdgeInsets.all(TSizes.defaultSpace),
@@ -48,13 +53,17 @@ class StoreScreen extends StatelessWidget {
                     const SizedBox(height: TSizes.spaceBtwSections),
 
                     //* Featured Brands
-                    TSectionHeading(title: 'Featured Brands', onPressed: () {}),
+                    TSectionHeading(
+                      title: 'Featured Brands',
+                      onPressed: () => Get.to(() => const AllBrandsScreen()),
+                    ),
                     const SizedBox(height: TSizes.spaceBtwItems / 2),
 
                     TGridLayout(
                       itemCount: 4,
                       mainAxisExtent: 80,
-                      itemBuilder: (_, index) => const TBrandCard(showBorder: false),
+                      itemBuilder: (_, index) =>
+                          const TBrandCard(showBorder: false),
                     ),
                   ],
                 ),

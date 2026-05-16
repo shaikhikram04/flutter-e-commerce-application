@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "1020369090007",
+    "project_id": "flutter-ecommerce-96278",
+    "storage_bucket": "flutter-ecommerce-96278.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020369090007:android:213ef55d240ac766edc792",
+        "android_client_info": {
+          "package_name": "com.example.flutter_e_commerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020369090007-lic3kpgs6re43mf928dq51u2i79l8sms.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_e_commerce",
+            "certificate_hash": "e4958fc0e601e1324fbff778aa930d4372ca3273"
+          }
+        },
+        {
+          "client_id": "1020369090007-1stjd3ho9ngvk0u758unrsqgg3lh6sgo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsJGtbR7yPdDnpMUeIjHjlPzl84j0JfyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020369090007-1stjd3ho9ngvk0u758unrsqgg3lh6sgo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1020369090007-sne9dpcolrgkh596vh08do926hg70jae.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterECommerce"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020369090007:android:1f9585bc371ded31edc792",
+        "android_client_info": {
+          "package_name": "com.ikramkolekar.my_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020369090007-8gi4o2919oo0189aas7n1ert105i72u6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ikramkolekar.my_store",
+            "certificate_hash": "e4958fc0e601e1324fbff778aa930d4372ca3273"
+          }
+        },
+        {
+          "client_id": "1020369090007-1stjd3ho9ngvk0u758unrsqgg3lh6sgo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsJGtbR7yPdDnpMUeIjHjlPzl84j0JfyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020369090007-1stjd3ho9ngvk0u758unrsqgg3lh6sgo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1020369090007-sne9dpcolrgkh596vh08do926hg70jae.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterECommerce"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
