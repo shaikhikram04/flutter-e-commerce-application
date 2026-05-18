@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce/features/authentication/screens/password_configuration/forget_password.dart';
-import 'package:flutter_e_commerce/features/authentication/screens/signup/signup_screen.dart';
+import 'package:flutter_e_commerce/features/authentication/screens/signup/signup.dart';
 import 'package:flutter_e_commerce/navigation_menu.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:flutter_e_commerce/utils/constants/text_strings.dart';

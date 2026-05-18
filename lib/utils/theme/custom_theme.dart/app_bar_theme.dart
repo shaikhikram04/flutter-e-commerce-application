@@ -21,7 +21,7 @@ class IAppBarTheme {
     scrolledUnderElevation: 0,
     backgroundColor: Colors.transparent,
     foregroundColor: Colors.transparent,
-    iconTheme: const IconThemeData(color: Colors.black, size: 24),
+    iconTheme: const IconThemeData(color: Colors.white, size: 24),
     titleTextStyle: ITextTheme.darkTextTheme.headlineMedium,
     actionsIconTheme: const IconThemeData(color: Colors.white, size: 24),
   );
