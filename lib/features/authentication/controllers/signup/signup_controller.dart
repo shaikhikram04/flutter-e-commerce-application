@@ -34,13 +34,20 @@ class SignupController extends GetxController {
 
       // Check internet connection
       final isConnected = await NetworkManager.instance.isConnected();
-      if (!isConnected) return;
+      if (!isConnected) {
+        TFullScreenLoader.stopLoading();
+        return;
+      }
 
       // Form validation
-      if (!signupFormKey.currentState!.validate()) return;
+      if (!signupFormKey.currentState!.validate()) {
+        TFullScreenLoader.stopLoading();
+        return;
+      }
 
       // Privacy policy check
       if (!privacyPolicy.value) {
+        TFullScreenLoader.stopLoading();
         TLoaders.warningSnackbar(
             title: 'Accept Privacy Policy',
             message:
@@ -68,6 +75,9 @@ class SignupController extends GetxController {
       final userRepository = Get.put(UserRepository());
       await userRepository.saveUserRecord(newUser);
 
+      // Close loading dialog before showing snackbar and navigating
+      TFullScreenLoader.stopLoading();
+
       // Show success message
       TLoaders.successSnackbar(
         title: 'Congratulations!',
@@ -76,12 +86,13 @@ class SignupController extends GetxController {
       );
 
       // Move to varification screen
-      Get.to(() => const VerifyEmailScreen());
+      Get.to(() => VerifyEmailScreen(
+            email: email.text.trim(),
+          ));
     } catch (e) {
       // Handle errors here
       TLoaders.errorSnackbar(title: 'Oh Snap!', message: e.toString());
-    } finally {
-      // Stop Loading
+      // Make sure loader is closed on error
       TFullScreenLoader.stopLoading();
     }
   }

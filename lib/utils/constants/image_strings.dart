@@ -32,6 +32,8 @@ class TImages {
   static const String accountCreatedSuccessfully =
       "assets/images/animations/account-created.json";
   static const String docerAnimation = "assets/images/animations/docer.json";
+  static const String successfullyRegisterAnimation =
+      "assets/images/animations/success.json";
 
   //! Categories Icons
   static const String sportIcon = "assets/icons/categories/animal.png";

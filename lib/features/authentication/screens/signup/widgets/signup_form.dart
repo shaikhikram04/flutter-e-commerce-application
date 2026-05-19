@@ -73,6 +73,7 @@ class TSignupForm extends StatelessWidget {
               labelText: TTexts.email,
               prefixIcon: Icon(Iconsax.direct),
             ),
+            keyboardType: TextInputType.emailAddress,
           ),
           const SizedBox(height: TSizes.spaceBtwInputFields),
 
