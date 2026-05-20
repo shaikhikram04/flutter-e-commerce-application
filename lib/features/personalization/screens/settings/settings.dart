@@ -4,6 +4,7 @@ import 'package:flutter_e_commerce/common/widgets/custom_shapes/containers/prima
 import 'package:flutter_e_commerce/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:flutter_e_commerce/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:flutter_e_commerce/common/widgets/text/section_heading.dart';
+import 'package:flutter_e_commerce/data/repositories/authentication/authentication_repository.dart';
 import 'package:flutter_e_commerce/features/personalization/screens/address/address.dart';
 import 'package:flutter_e_commerce/features/personalization/screens/profile/profile.dart';
 import 'package:flutter_e_commerce/features/shop/screens/order/order.dart';
@@ -16,6 +17,7 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = AuthenticationRepository.instance;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -120,7 +122,9 @@ class SettingsScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(
-                        onPressed: () {}, child: const Text('Logout')),
+                      onPressed: controller.logout,
+                      child: const Text('Logout'),
+                    ),
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections * 2),
                 ],

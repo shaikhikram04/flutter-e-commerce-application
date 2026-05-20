@@ -34,47 +34,119 @@ class TLoaders {
 
   static void successSnackbar(
       {required String title, String message = '', int duration = 3}) {
-    Get.snackbar(
-      title,
-      message,
-      isDismissible: true,
-      shouldIconPulse: true,
-      colorText: TColors.white,
-      backgroundColor: TColors.primary,
-      snackPosition: SnackPosition.BOTTOM,
-      duration: Duration(seconds: duration),
-      margin: const EdgeInsets.all(10),
-      icon: const Icon(Iconsax.check, color: TColors.white),
+    ScaffoldMessenger.of(Get.context!).showSnackBar(
+      SnackBar(
+        content: Row(
+          // crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Icon(Iconsax.check, color: TColors.white),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: Theme.of(Get.context!)
+                        .textTheme
+                        .titleLarge!
+                        .apply(color: TColors.white),
+                  ),
+                  SizedBox(height: message.isNotEmpty ? 4 : 0),
+                  Text(
+                    message,
+                    style: Theme.of(Get.context!)
+                        .textTheme
+                        .labelMedium!
+                        .apply(color: TColors.white, heightDelta: -0.2),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        backgroundColor: TColors.primary,
+        duration: Duration(seconds: duration),
+        // margin: const EdgeInsets.all(10),
+      ),
     );
   }
 
   static void warningSnackbar({required String title, String message = ''}) {
-    Get.snackbar(
-      title,
-      message,
-      isDismissible: true,
-      shouldIconPulse: true,
-      colorText: TColors.white,
-      backgroundColor: Colors.orange,
-      snackPosition: SnackPosition.BOTTOM,
-      duration: const Duration(seconds: 3),
-      margin: const EdgeInsets.all(20),
-      icon: const Icon(Iconsax.warning_2, color: TColors.white),
+    ScaffoldMessenger.of(Get.context!).showSnackBar(
+      SnackBar(
+        content: Row(
+          // crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Icon(Iconsax.warning_2, color: TColors.white),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: Theme.of(Get.context!)
+                        .textTheme
+                        .titleLarge!
+                        .apply(color: TColors.white),
+                  ),
+                  SizedBox(height: message.isNotEmpty ? 4 : 0),
+                  Text(
+                    message,
+                    style: Theme.of(Get.context!)
+                        .textTheme
+                        .labelMedium!
+                        .apply(color: TColors.white, heightDelta: -0.2),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        backgroundColor: Colors.orange,
+        duration: const Duration(seconds: 3),
+        // margin: const EdgeInsets.all(10),
+      ),
     );
   }
 
   static void errorSnackbar({required String title, String message = ''}) {
-    Get.snackbar(
-      title,
-      message,
-      isDismissible: true,
-      shouldIconPulse: true,
-      colorText: TColors.white,
-      backgroundColor: Colors.red.shade600,
-      snackPosition: SnackPosition.BOTTOM,
-      duration: const Duration(seconds: 3),
-      margin: const EdgeInsets.all(20),
-      icon: const Icon(Iconsax.warning_2, color: TColors.white),
+    ScaffoldMessenger.of(Get.context!).showSnackBar(
+      SnackBar(
+        content: Row(
+          // crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Icon(Iconsax.warning_2, color: TColors.white),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: Theme.of(Get.context!)
+                        .textTheme
+                        .titleLarge!
+                        .apply(color: TColors.white),
+                  ),
+                  SizedBox(height: message.isNotEmpty ? 4 : 0),
+                  Text(
+                    message,
+                    style: Theme.of(Get.context!)
+                        .textTheme
+                        .labelMedium!
+                        .apply(color: TColors.white, heightDelta: -0.2),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        backgroundColor: Colors.red.shade600,
+        duration: const Duration(seconds: 3),
+        // margin: const EdgeInsets.all(10),
+      ),
     );
   }
 }
