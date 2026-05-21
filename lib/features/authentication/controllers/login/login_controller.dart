@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_e_commerce/data/repositories/authentication/authentication_repository.dart';
+import 'package:flutter_e_commerce/features/personalization/controllers/user_controller.dart';
 import 'package:flutter_e_commerce/utils/constants/image_strings.dart';
 import 'package:flutter_e_commerce/utils/helpers/network_manager.dart';
 import 'package:flutter_e_commerce/utils/popups/full_screen_loader.dart';
@@ -15,6 +16,7 @@ class LoginController extends GetxController {
   final email = TextEditingController();
   final password = TextEditingController();
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
+  final userController = Get.put(UserController());
 
   @override
   onInit() {
@@ -54,6 +56,37 @@ class LoginController extends GetxController {
         email.text.trim(),
         password.text.trim(),
       );
+
+      // Remove loading
+      TFullScreenLoader.stopLoading();
+
+      // Redirect
+      AuthenticationRepository.instance.screenRedirect();
+    } catch (e) {
+      TFullScreenLoader.stopLoading();
+      TLoaders.errorSnackbar(title: 'Oh Snap!', message: e.toString());
+    }
+  }
+
+  Future<void> googleSignIn() async {
+    try {
+      // Start loading
+      TFullScreenLoader.openLoadingDialog(
+        'Logging you in...',
+        TImages.docerAnimation,
+      );
+
+      // check network connectivity
+      final isConnected = await NetworkManager.instance.isConnected();
+      if (!isConnected) {
+        TFullScreenLoader.stopLoading();
+        return;
+      }
+
+      final userCredential =
+          await AuthenticationRepository.instance.signInWithGoogle();
+
+      await userController.saveUserRecord(userCredential);
 
       // Remove loading
       TFullScreenLoader.stopLoading();

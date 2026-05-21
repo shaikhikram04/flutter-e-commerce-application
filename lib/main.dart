@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_e_commerce/app.dart';
 import 'package:flutter_e_commerce/data/repositories/authentication/authentication_repository.dart';
 import 'package:flutter_e_commerce/firebase_options.dart';
@@ -17,6 +18,9 @@ Future<void> main() async {
 
   //? Initialize splash screen
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+
+  //? Load environment variables
+  await dotenv.load(fileName: '.env');
 
   //? Initialize Firebase
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform)

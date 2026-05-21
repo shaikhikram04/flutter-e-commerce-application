@@ -24,15 +24,14 @@ class UserModel {
 
   String get formatedPhoneNumber => TFormatter.formatPhoneNumber(phoneNumber);
 
-  static List<String> nameParts(fullName) => fullName.split(' ');
+  static List<String> nameParts(String fullName) => fullName.split(' ');
 
   static String generateUsername(String fullName) {
     final nameParts = UserModel.nameParts(fullName);
     String firstName = nameParts[0].toLowerCase();
     String lastName = nameParts.length > 1 ? nameParts[1].toLowerCase() : '';
 
-    String camelCaseUsername =
-        firstName + lastName[0].toUpperCase() + lastName.substring(1);
+    String camelCaseUsername = firstName + lastName;
     String usernameWithPrefix = 'cwt_$camelCaseUsername';
     return usernameWithPrefix;
   }
