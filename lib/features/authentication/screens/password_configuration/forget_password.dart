@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_e_commerce/features/authentication/screens/password_configuration/reset_password.dart';
+import 'package:flutter_e_commerce/features/authentication/controllers/forget_password/forget_password_controller.dart';
 import 'package:flutter_e_commerce/utils/constants/sizes.dart';
 import 'package:flutter_e_commerce/utils/constants/text_strings.dart';
+import 'package:flutter_e_commerce/utils/validator/validator.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -10,6 +11,7 @@ class ForgetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final countroller = Get.put(ForgetPasswordController());
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
@@ -30,10 +32,15 @@ class ForgetPassword extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBtwSections * 2),
 
             //* Text Field
-            TextFormField(
-              decoration: const InputDecoration(
-                labelText: TTexts.email,
-                prefixIcon: Icon(Iconsax.direct_right),
+            Form(
+              key: countroller.forgetPasswordFormKey,
+              child: TextFormField(
+                controller: countroller.email,
+                validator: TValidator.validateEmail,
+                decoration: const InputDecoration(
+                  labelText: TTexts.email,
+                  prefixIcon: Icon(Iconsax.direct_right),
+                ),
               ),
             ),
             const SizedBox(height: TSizes.spaceBtwSections * 2),
@@ -42,7 +49,7 @@ class ForgetPassword extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => Get.off(() => const ResetPassword()),
+                onPressed: countroller.sendPasswordResetEmail,
                 child: const Text(TTexts.submit),
               ),
             )
