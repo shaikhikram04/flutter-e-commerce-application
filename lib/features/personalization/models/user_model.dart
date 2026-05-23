@@ -58,9 +58,9 @@ class UserModel {
     };
   }
 
-  factory UserModel.fromMap(DocumentSnapshot<Map<String, dynamic>> document) {
+  factory UserModel.fromSnapshot(DocumentSnapshot document) {
     if (document.data() != null) {
-      final data = document.data()!;
+      final data = document.data() as Map<String, dynamic>;
       return UserModel(
         id: document.id,
         firseName: data['firseName'],
@@ -72,5 +72,24 @@ class UserModel {
       );
     }
     return UserModel.empty();
+  }
+
+  UserModel copyWith({
+    String? firseName,
+    String? lastName,
+    String? username,
+    String? email,
+    String? phoneNumber,
+    String? profilePicture,
+  }) {
+    return UserModel(
+      id: id,
+      firseName: firseName ?? this.firseName,
+      lastName: lastName ?? this.lastName,
+      username: username ?? this.username,
+      email: email ?? this.email,
+      phoneNumber: phoneNumber ?? this.phoneNumber,
+      profilePicture: profilePicture ?? this.profilePicture,
+    );
   }
 }

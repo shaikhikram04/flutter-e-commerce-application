@@ -22,6 +22,8 @@ dependencies:
   smooth_page_indicator: ^1.2.1
   connectivity_plus: ^7.1.1
   flutter_dotenv: ^5.2.1
+  shimmer: ^3.0.0
+
 
   #? Icons
   cupertino_icons: ^1.0.8
